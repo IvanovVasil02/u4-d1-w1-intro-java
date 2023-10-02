@@ -6,7 +6,11 @@ public class es1 {
 
         String[] myArray = {"as", "df", "gh", "jk", "lm"};
 
-        arrayPusher(myArray, "ciao");
+        myArray = arrayPusher(myArray, "ciao");
+
+        for (String s : myArray) {
+            System.out.println(s);
+        }
     }
 
     public static int product(int a, int b) {
@@ -17,21 +21,14 @@ public class es1 {
         return a.concat(Integer.toString(b));
     }
 
-    public static void arrayPusher(String[] myArray, String myString) {
+    public static String[] arrayPusher(String[] myArray, String myString) {
         int arraySize = myArray.length + 1;
         int positionToAdd = 2;
         String[] stringContainer = {myString};
         String[] newArray = new String[arraySize];
-
-
         System.arraycopy(myArray, 0, newArray, 0, 2);
         System.arraycopy(stringContainer, 0, newArray, positionToAdd, 1);
         System.arraycopy(myArray, 2, newArray, 3, 3);
-//
-
-
-        for (String s : newArray) {
-            System.out.println(s);
-        }
+        return myArray = newArray;
     }
 }
