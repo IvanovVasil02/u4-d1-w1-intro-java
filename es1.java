@@ -18,7 +18,7 @@ public class es1 {
     }
 
     public static String concatString(String a, int b) {
-        return a.concat(Integer.toString(b));
+        return a + (Integer.toString(b));
     }
 
     public static String[] arrayPusher(String[] myArray, String myString) {
